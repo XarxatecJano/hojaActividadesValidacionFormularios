@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario hoja de actividades</title>
+</head>
+<body>
+    <form action="#" id="form1" novalidate>
+        <p>
+            <label for="name_input">Nombre: </label>
+            <input type="text" name="name" id="name_input" pattern="^[A-ZÁÉÍÓÚÄËÏÖÜÑÇ][a-záéíóúäëïöüñç]*(?:\s[A-ZÁÉÍÓÚÄËÏÖÜÑÇ][a-záéíóúäëïöüñç]*)*$" required>
+        </p>
+        <p>
+            <label for="surname_input">Apellido: </label>
+            <input type="text" name="surname" id="surname_input" pattern="^[A-ZÁÉÍÓÚÄËÏÖÜÑÇ][a-záéíóúäëïöüñç]*(?:\s[A-ZÁÉÍÓÚÄËÏÖÜÑÇ][a-záéíóúäëïöüñç]*)*$" required>
+        </p>
+        <p>
+            <label for="phone_input">Teléfono: </label>
+            <input type="tel" name="phone" id="phone_input" pattern="^\+\d{4}\s\d{9}$">
+        </p>
+        <p>
+            <label for="email_input">Email: </label>
+            <input type="email" name="email" id="email_input" pattern="^[a-zA-Z0-9._%+]+@[a-zA-Z0-9._%+]+\.[a-zA-Z]{2,}$" required>
+        </p>
+        <p>
+            <label for="dni_input">DNI: </label>
+            <input type="text" name="dni" id="dni_input" pattern ="^\d{8}[A-Z]$" required>
+        </p>
+        <p>
+            <fieldset id="hobbies_list">
+                <legend>Aficiones</legend>
+                <input type="checkbox" name="hobbies" id="sports_ch"><label for="sports_ch">Deportes</label> 
+                <input type="checkbox" name="hobbies" id="cinema_ch"><label for="cinema_ch">Cine</label> 
+                <input type="checkbox" name="hobbies" id="books_ch"><label for="books_ch">Lectura</label> 
+                <input type="checkbox" name="hobbies" id="games_ch"><label for="games_ch">Videojuegos</label> 
+                <input type="checkbox" name="hobbies" id="travel_ch"><label for="travel_ch">Viajar</label> 
+                <input type="checkbox" name="hobbies" id="other_ch"><label for="other_ch">Otros</label> 
+                <p><textarea name="other_hobbies" id="other_hobbies_textarea" cols="50" rows="3"></textarea></p>
+            </fieldset>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>
